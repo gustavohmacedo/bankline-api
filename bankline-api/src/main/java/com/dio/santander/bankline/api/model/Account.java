@@ -1,13 +1,15 @@
 package com.dio.santander.bankline.api.model;
 
 import lombok.Getter;
+import lombok.Setter;
 
-import javax.persistence.Column;
-import javax.persistence.Embeddable;
+import javax.persistence.*;
 
 @Getter
+@Setter
 @Embeddable
 public class Account {
+
     @Column(name = "account_number")
     private Long number;
 

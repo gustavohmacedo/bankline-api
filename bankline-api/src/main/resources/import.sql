@@ -1,0 +1,1 @@
+INSERT INTO tb_correntista(account_number, account_balance, cpf, name) values(3366444,'125.35','07981367488','Gustavo Macedo')
