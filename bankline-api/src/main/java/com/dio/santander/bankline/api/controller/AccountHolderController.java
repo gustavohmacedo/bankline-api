@@ -29,9 +29,9 @@ public class AccountHolderController {
 
     @GetMapping
     public ResponseEntity<Page<AccountHolderDto>> getAllAccountHolders(@PageableDefault(sort = "id",
-            direction = Sort.Direction.ASC, page = 0, size = 5) Pageable pageable) {
-        Page<AccountHolder> accountHolders = accountHolderService.getAll(pageable);
-        return new ResponseEntity<>(AccountHolderDto.returnAccountHoldersDtoList(accountHolders),
+            direction = Sort.Direction.ASC, page = 0, size = 5) Pageable page) {
+        Page<AccountHolder> accountHolders = accountHolderService.getAll(page);
+        return new ResponseEntity<>(AccountHolderDto.retrieveAccountHoldersDto(accountHolders),
                 HttpStatus.OK);
     }
 }

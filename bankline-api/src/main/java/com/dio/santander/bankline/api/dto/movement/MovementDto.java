@@ -27,7 +27,7 @@ public class MovementDto {
         this.idAccount = movement.getIdAccount();
     }
 
-    public static Page<MovementDto> returnMovementDtoList(Page<Movement> movements) {
+    public static Page<MovementDto> returnMovementsDto(Page<Movement> movements) {
         return movements.map(MovementDto::new);
     }
 }

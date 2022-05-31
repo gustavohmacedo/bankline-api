@@ -5,7 +5,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
-import java.util.Date;
+import java.time.LocalDateTime;
 
 @Getter
 @Setter
@@ -18,7 +18,7 @@ public class Movement {
     private Long id;
 
     @Column(name = "date_time")
-    private Date dateTime;
+    private LocalDateTime dateTime;
 
     private String description;
 

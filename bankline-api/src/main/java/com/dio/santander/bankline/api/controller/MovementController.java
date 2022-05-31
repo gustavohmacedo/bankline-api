@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.*;
 import javax.validation.Valid;
 
 @RestController
-@RequestMapping("/api/movimentacao")
+@RequestMapping("/api/movimentacoes")
 public class MovementController {
 
     @Autowired
@@ -31,9 +31,9 @@ public class MovementController {
 
     @GetMapping
     public ResponseEntity<Page<MovementDto>> getAllMovements(@PageableDefault(sort = "id",
-            direction = Sort.Direction.ASC, page = 0, size = 5) Pageable pageable) {
-        Page<Movement> movements = movementService.getAll(pageable);
-        return new ResponseEntity<>(MovementDto.returnMovementDtoList(movements), HttpStatus.OK);
+            direction = Sort.Direction.ASC, page = 0, size = 5) Pageable page) {
+        Page<Movement> movements = movementService.getAll(page);
+        return new ResponseEntity<>(MovementDto.returnMovementsDto(movements), HttpStatus.OK);
     }
 
 }

@@ -16,8 +16,8 @@ public class AccountHolderDto {
         this.name = accountHolder.getName();
 
     }
-
-    public static Page<AccountHolderDto> returnAccountHoldersDtoList(Page<AccountHolder> accountHolders) {
+     //retrieveAccountHoldersDto
+    public static Page<AccountHolderDto> retrieveAccountHoldersDto(Page<AccountHolder> accountHolders) {
         return accountHolders.map(AccountHolderDto::new);
     }
 }

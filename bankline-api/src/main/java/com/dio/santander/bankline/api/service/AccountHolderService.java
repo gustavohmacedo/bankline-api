@@ -16,7 +16,6 @@ public class AccountHolderService {
     private AccountHolderRepository accountHolderRepository;
 
     public AccountHolder save(AccountHolder newAccountHolder) {
-
         AccountHolder accountHolder = new AccountHolder();
         accountHolder.setCpf(newAccountHolder.getCpf());
         accountHolder.setName(newAccountHolder.getName());
@@ -30,8 +29,8 @@ public class AccountHolderService {
 
     }
 
-    public Page<AccountHolder> getAll(Pageable pageable) {
-        return accountHolderRepository.findAll(pageable);
+    public Page<AccountHolder> getAll(Pageable page) {
+        return accountHolderRepository.findAll(page);
     }
 }
 
