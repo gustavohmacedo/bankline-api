@@ -12,16 +12,13 @@ import javax.validation.constraints.NotBlank;
 @Setter
 public class MovementForm {
     @NotBlank(message = "Description cannot be blank")
-    @Length(min = 4, max = 20)
+    @Length(min = 4, max = 40)
     private String description;
 
-    @NotBlank(message = "Amount cannot be blank")
     private Double amount;
 
-    @NotBlank(message = "Type cannot be blank")
     private TypeMovement type;
 
-    @NotBlank(message = "idAccount cannot be blank")
     private Long idAccount;
 
     public Movement convertToEntity() {
